@@ -7,7 +7,7 @@ const bancoDeDados = require('./bancoDeDados')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/produtos', (req, res) => {
+app.get('/produtos', (req, res, next) => {
     res.send(bancoDeDados.getProdutos()) 
 })
 
